@@ -1,8 +1,8 @@
 #環境に応じて変数を設定してください. OSの環境によるパス表記に注意。
 #バックアップ対象
-[string]$from_dir = "/Users/kaito/Desktop/test_from"
+[string]$from_dir = ""
 #バックアップ保存先
-[string]$to_dir = "/Users/kaito/Desktop/test_to"
+[string]$to_dir = ""
 #保存フォルダ名形式
 [string]$save_name = Get-Date -Format "yyyy-MM-dd"
 #保存期間
