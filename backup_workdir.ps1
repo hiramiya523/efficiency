@@ -17,7 +17,7 @@ if((Test-Path $from_dir) -and (Test-Path $to_dir)){
     Copy-Item $from_dir $backup_dir -Recurse
     Compress-Archive -Path $backup_dir -DestinationPath "${backup_dir}.zip"
     #コピー削除
-    Remove-item $backup_dir -Recurse
+    Remove-item $backup_dir -Recurse -Force
 }else {
     Write-Host "パス不正です"
 }
