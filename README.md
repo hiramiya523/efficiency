@@ -7,3 +7,6 @@ Gmail生成プログラム
 
 ## pomodoro_technique.bat 　
 ポモドーロテクニック
+
+## autoRecord.js  
+GASで動かす、バッチ記録スクリプト
