@@ -14,7 +14,7 @@ class SendGmail:
         self.gmail_account = 'XXXXXX@gmail.com'
         self.gamil_password = 'PASSWORD'
         self.mail_to = 'xxxxx@xxx.jp'
-        self.subject = '【LRI】{0}-{1}-{2}-{3}-予'.format(year, month, date, work_place)
+        self.subject = '{0}-{1}-{2}-{3}-予'.format(year, month, date, work_place)
         self.body = body
 
         msg = MIMEText(self.body)
