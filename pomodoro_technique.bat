@@ -1,15 +1,19 @@
 @echo off
-set min=25
 
-Rem 集中時間20分 1cycle
-timeout /NOBREAK 1300
-rundll32 user32.dll,MessageBeep
-msg hiram /W meditation, water, eye, squat
-timeout /NOBREAK 500
+rem ** 任意設定 ** 
+rem min:分, finMsg:終了メッセージ, enabledBeep:終了時にビープ音を鳴らすか(true/false)
+set min=25 
+set finMsg="1セット終了！"
+set enabledBeep=true
 
+rem ** ポモドーロプログラム **
+set /a sec=%min%*60
+timeout /t %sec% /nobreak
 
-Rem 3cycle
-echo start
-timeout /NOBREAK 1300
-rundll32 user32.dll,MessageBeep
-msg hiram /W rest 15min
+if %enabledBeep% equ true (
+    rundll32 user32.dll,MessageBeep
+)
+
+msg %USERNAME% %finMsg%
+
+pause
